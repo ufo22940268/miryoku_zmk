@@ -20,6 +20,8 @@
     };
 };
 
+
+
 / {
     chosen {
         zephyr,display = &lpm_view;

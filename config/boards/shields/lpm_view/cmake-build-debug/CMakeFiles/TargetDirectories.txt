@@ -1,0 +1,2 @@
+/Users/chao.cheng/IdeaProjects/miryoku_zmk/config/boards/shields/lpm_view/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/chao.cheng/IdeaProjects/miryoku_zmk/config/boards/shields/lpm_view/cmake-build-debug/CMakeFiles/rebuild_cache.dir
