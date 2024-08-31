@@ -16,9 +16,7 @@
 #include <zephyr/drivers/display.h>
 
 #include <zephyr/logging/log.h>
-
-LOG_MODULE_REGISTER(display_lpm009m360a, CONFIG_DISPLAY_LOG_LEVEL
-);
+LOG_MODULE_REGISTER(display_lpm009m360a, CONFIG_DISPLAY_LOG_LEVEL);
 
 #define LPM009M360A_RESET_TIME K_MSEC(1)
 #define LPM009M360A_EXIT_SLEEP_TIME K_MSEC(1)
@@ -29,8 +27,6 @@ struct lpm009m360a_data {
 
 struct lpm009m360a_config {
     struct spi_dt_spec bus;
-    struct gpio_dt_spec extcomin;
-    struct gpio_dt_spec disp;
     uint16_t height;
     uint16_t width;
     int rotation;
@@ -54,7 +50,7 @@ static int lpm009m360a_transmit_hold(const struct device *dev, uint8_t cmd, uint
     }
 
     if (tx_data != NULL) {
-        tx_buf.buf = (void *) tx_data;
+        tx_buf.buf = (void *)tx_data;
         tx_buf.len = tx_count;
         ret = spi_write_dt(&config->bus, &tx_bufs);
         if (ret < 0) {
@@ -77,10 +73,7 @@ static int lpm009m360a_transmit(const struct device *dev, uint8_t cmd, uint8_t a
 static int lpm009m360a_exit_sleep(const struct device *dev) {
     int ret;
     const struct lpm009m360a_config *config = dev->config;
-    ret = gpio_pin_set_dt(&config->disp, 1);
-    if (ret < 0) {
-        return ret;
-    }
+		LOG_DBG("Exiting sleep mode");
     k_sleep(LPM009M360A_EXIT_SLEEP_TIME);
     return 0;
 }
@@ -88,10 +81,7 @@ static int lpm009m360a_exit_sleep(const struct device *dev) {
 static int lpm009m360a_sleep(const struct device *dev) {
     int ret;
     const struct lpm009m360a_config *config = dev->config;
-    ret = gpio_pin_set_dt(&config->disp, 0);
-    if (ret < 0) {
-        return ret;
-    }
+		LOG_DBG("Sleeping display, but not really");
     return 0;
 }
 
@@ -118,11 +108,10 @@ static int lpm009m360a_read(const struct device *dev, const uint16_t x, const ui
 }
 
 #define RGB565_RGB111(s) ((s & 0x8000) >> 12) | ((s & 0x0400) >> 8) | ((s & 0x0010) >> 3)
-
 static int lpm009m360a_write(const struct device *dev, const uint16_t x, const uint16_t y,
                              const struct display_buffer_descriptor *desc, const void *buf) {
     // const uint16_t *source_buf = (uint16_t *)buf;
-    const uint8_t *source_buf8 = (uint8_t *) buf;
+    const uint8_t *source_buf8 = (uint8_t *)buf;
     const struct lpm009m360a_config *config = dev->config;
     struct lpm009m360a_data *data = dev->data;
     int ret = 0;
@@ -139,7 +128,7 @@ static int lpm009m360a_write(const struct device *dev, const uint16_t x, const u
         // LOG_INF("x:%d, y:%d, w:%d, h:%d", x, y, desc->width, desc->height);
         for (uint8_t i = 0; i < cnt; i++) {
             ret = lpm009m360a_transmit_hold(dev, cmd, i + y + 1,
-                                            (uint8_t * ) & data->buf[(y + i) * len], len);
+                                            (uint8_t *)&data->buf[(y + i) * len], len);
         }
     } else if (config->rotation == 1) {
         cnt = desc->width;
@@ -148,10 +137,10 @@ static int lpm009m360a_write(const struct device *dev, const uint16_t x, const u
                 data->buf[(143 - x - j) * 9 + y / 8 + i] = source_buf8[i * desc->width + j];
             }
         }
-//        LOG_INF("x:%d, y:%d, w:%d, h:%d", x, y, desc->width, desc->height);
+        // LOG_INF("x:%d, y:%d, w:%d, h:%d", x, y, desc->width, desc->height);
         for (uint8_t i = 0; i < cnt; i++) {
             ret = lpm009m360a_transmit_hold(dev, cmd, 143 - x - i + 1,
-                                            (uint8_t * ) & data->buf[(143 - x - i) * len], len);
+                                            (uint8_t *)&data->buf[(143 - x - i) * len], len);
         }
     }
 
@@ -224,22 +213,21 @@ static int lpm009m360a_init(const struct device *dev) {
     //     LOG_ERR("extcomin GPIO port for display not ready");
     //     return -ENODEV;
     // }
-
-    ret = gpio_pin_configure_dt(&config->extcomin, GPIO_OUTPUT_INACTIVE);
-    if (ret) {
-        LOG_ERR("Couldn't configure extcomin pin");
-        return ret;
-    }
+    // ret = gpio_pin_configure_dt(&config->extcomin, GPIO_OUTPUT_INACTIVE);
+    // if (ret) {
+    //     LOG_ERR("Couldn't configure extcomin pin");
+    //     return ret;
+    // }
 
     // if (!gpio_is_ready_dt(&config->disp)) {
     //     LOG_ERR("disp GPIO port not ready");
     //     return -ENODEV;
     // }
-    ret = gpio_pin_configure_dt(&config->disp, GPIO_OUTPUT);
-    if (ret) {
-        LOG_ERR("Couldn't configure disp pin");
-        return ret;
-    }
+    // ret = gpio_pin_configure_dt(&config->disp, GPIO_OUTPUT);
+    // if (ret) {
+    //     LOG_ERR("Couldn't configure disp pin");
+    //     return ret;
+    // }
     ret = lpm009m360a_reset_display(dev);
     if (ret) {
         LOG_ERR("Couldn't reset display");
@@ -279,16 +267,16 @@ static int lpm009m360a_pm_action(const struct device *dev, enum pm_device_action
 #endif /* CONFIG_PM_DEVICE */
 
 static const struct display_driver_api lpm009m360a_api = {
-        .blanking_on = lpm009m360a_blanking_on,
-        .blanking_off = lpm009m360a_blanking_off,
-        .write = lpm009m360a_write,
-        .read = lpm009m360a_read,
-        .get_framebuffer = lpm009m360a_get_framebuffer,
-        .set_brightness = lpm009m360a_set_brightness,
-        .set_contrast = lpm009m360a_set_contrast,
-        .get_capabilities = lpm009m360a_get_capabilities,
-        .set_pixel_format = lpm009m360a_set_pixel_format,
-        .set_orientation = lpm009m360a_set_orientation,
+    .blanking_on = lpm009m360a_blanking_on,
+    .blanking_off = lpm009m360a_blanking_off,
+    .write = lpm009m360a_write,
+    .read = lpm009m360a_read,
+    .get_framebuffer = lpm009m360a_get_framebuffer,
+    .set_brightness = lpm009m360a_set_brightness,
+    .set_contrast = lpm009m360a_set_contrast,
+    .get_capabilities = lpm009m360a_get_capabilities,
+    .set_pixel_format = lpm009m360a_set_pixel_format,
+    .set_orientation = lpm009m360a_set_orientation,
 };
 
 #define LPM009M360A_INIT(inst)                                                                     \
@@ -296,8 +284,6 @@ static const struct display_driver_api lpm009m360a_api = {
     const static struct lpm009m360a_config lpm009m360a_config_##inst = {                           \
         .bus = SPI_DT_SPEC_INST_GET(                                                               \
             inst, SPI_OP_MODE_MASTER | SPI_WORD_SET(8) | SPI_HOLD_ON_CS | SPI_LOCK_ON, 0),         \
-        .extcomin = GPIO_DT_SPEC_INST_GET(inst, extcomin_gpios),                                   \
-        .disp = GPIO_DT_SPEC_INST_GET(inst, disp_gpios),                                           \
         .width = DT_INST_PROP(inst, width),                                                        \
         .height = DT_INST_PROP(inst, height),                                                      \
         .color_mode = DT_INST_PROP(inst, color_mode),                                              \
