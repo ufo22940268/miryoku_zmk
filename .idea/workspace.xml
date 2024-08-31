@@ -18,7 +18,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fe47844-4dde-4598-8290-ee7fd9c35466" name="Changes" comment="Remove unused WS2812 LED strip configuration&#10;&#10;The WS2812 LED strip related code in the nice_nano_v2.overlay file has been removed. This cleanup includes removing the WS2812-specific configuration such as SPI properties and color mapping, as well as eliminating unnecessary includes and chosen node references." />
+    <list default="true" id="4fe47844-4dde-4598-8290-ee7fd9c35466" name="Changes" comment="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` file for project-specific settings. Added multiple run configurations such as flashing temper devices and viewing corne logs to streamline development and debugging processes.">
+      <change beforePath="$PROJECT_DIR$/config/boards/shields/lpm_view/lpm_view.overlay" beforeDir="false" afterPath="$PROJECT_DIR$/config/boards/shields/lpm_view/lpm_view.overlay" afterDir="false" />
+    </list>
+    <list id="9773e84f-53b7-4bbc-800e-7d31ee28fa0b" name="driver lpm update" comment="Remove GPIO configuration for display module&#10;&#10;Commented out the unused `extcomin_gpios` and `disp_gpios` definitions in the YAML file. Adjusted the C code accordingly by removing their usage and configuration, simplifying the initialization and exit sleep functions." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,53 +63,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;Shell Script.build.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash left cc.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash left nice nano lpm (1).executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash left nice nano lpm.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash left temper.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash left.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash right nice nano lpm.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash right nrfmicro_13 lpm.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash right nrfmicro_13.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash right temper.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.flash right.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.reset nice_nano_v2.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.view corne log.executor&quot;: &quot;Run&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/chao.cheng/IdeaProjects/miryoku_zmk/config/boards/shields/temper/boards&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "Shell Script.build.executor": "Run",
+    "Shell Script.flash left cc.executor": "Run",
+    "Shell Script.flash left nice nano lpm (1).executor": "Run",
+    "Shell Script.flash left nice nano lpm.executor": "Run",
+    "Shell Script.flash left temper.executor": "Run",
+    "Shell Script.flash left.executor": "Run",
+    "Shell Script.flash right nice nano lpm.executor": "Run",
+    "Shell Script.flash right nrfmicro_13 lpm.executor": "Run",
+    "Shell Script.flash right nrfmicro_13.executor": "Run",
+    "Shell Script.flash right temper.executor": "Run",
+    "Shell Script.flash right.executor": "Run",
+    "Shell Script.reset nice_nano_v2.executor": "Run",
+    "Shell Script.view corne log.executor": "Run",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "chao.cheng",
+    "go.import.settings.migrated": "true",
+    "ignore_missing_gitignore": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/chao.cheng/IdeaProjects/miryoku_zmk",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config/boards/shields/temper/boards" />
@@ -120,7 +123,7 @@
       <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.flash left nice nano lpm">
+  <component name="RunManager" selected="Shell Script.flash right nrfmicro_13 lpm">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -256,6 +259,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4fe47844-4dde-4598-8290-ee7fd9c35466" name="Changes" comment="" />
+      <changelist id="9773e84f-53b7-4bbc-800e-7d31ee28fa0b" name="driver lpm update" comment="" />
       <created>1713608675331</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -318,6 +322,7 @@
       <workItem from="1725077769312" duration="213000" />
       <workItem from="1725077986965" duration="27000" />
       <workItem from="1725078021194" duration="50000" />
+      <workItem from="1725078089172" duration="1683000" />
     </task>
     <task id="LOCAL-00001" summary="v">
       <option name="closed" value="true" />
@@ -447,7 +452,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724644695981</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` file for project-specific settings. Added multiple run configurations such as flashing temper devices and viewing corne logs to streamline development and debugging processes.">
+      <option name="closed" value="true" />
+      <created>1725078304588</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1725078304588</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` file for project-specific settings. Added multiple run configurations such as flashing temper devices and viewing corne logs to streamline development and debugging processes.">
+      <option name="closed" value="true" />
+      <created>1725078367831</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1725078367831</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Remove GPIO configuration for display module&#10;&#10;Commented out the unused `extcomin_gpios` and `disp_gpios` definitions in the YAML file. Adjusted the C code accordingly by removing their usage and configuration, simplifying the initialization and exit sleep functions.">
+      <option name="closed" value="true" />
+      <created>1725098111554</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1725098111554</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +508,10 @@
     <MESSAGE value="add temper" />
     <MESSAGE value="Update shield config and enhance Bluetooth performance&#10;&#10;Renamed the default keyboard name to &quot;temper&quot; for consistency. Added configuration settings to improve Bluetooth controller transmission power and enabled BLE experimental connection mode on both left and right temper shield configurations." />
     <MESSAGE value="Remove unused WS2812 LED strip configuration&#10;&#10;The WS2812 LED strip related code in the nice_nano_v2.overlay file has been removed. This cleanup includes removing the WS2812-specific configuration such as SPI properties and color mapping, as well as eliminating unnecessary includes and chosen node references." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused WS2812 LED strip configuration&#10;&#10;The WS2812 LED strip related code in the nice_nano_v2.overlay file has been removed. This cleanup includes removing the WS2812-specific configuration such as SPI properties and color mapping, as well as eliminating unnecessary includes and chosen node references." />
+    <MESSAGE value="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` file for project-specific settings. Added multiple run configurations such as flashing temper devices and viewing corne logs to streamline development and debugging processes." />
+    <MESSAGE value="driver lpm update" />
+    <MESSAGE value="Remove GPIO configuration for display module&#10;&#10;Commented out the unused `extcomin_gpios` and `disp_gpios` definitions in the YAML file. Adjusted the C code accordingly by removing their usage and configuration, simplifying the initialization and exit sleep functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove GPIO configuration for display module&#10;&#10;Commented out the unused `extcomin_gpios` and `disp_gpios` definitions in the YAML file. Adjusted the C code accordingly by removing their usage and configuration, simplifying the initialization and exit sleep functions." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
