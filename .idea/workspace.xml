@@ -18,10 +18,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fe47844-4dde-4598-8290-ee7fd9c35466" name="Changes" comment="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` file for project-specific settings. Added multiple run configurations such as flashing temper devices and viewing corne logs to streamline development and debugging processes.">
-      <change beforePath="$PROJECT_DIR$/config/boards/shields/lpm_view/lpm_view.overlay" beforeDir="false" afterPath="$PROJECT_DIR$/config/boards/shields/lpm_view/lpm_view.overlay" afterDir="false" />
+    <list default="true" id="4fe47844-4dde-4598-8290-ee7fd9c35466" name="Changes" comment="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` for project-specific settings. Added multiple run configurations to streamline development and debugging, such as flashing temper devices and viewing corne logs.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/boards/shields/lpm_view_adapter/boards/nice_nano_v2.overlay" beforeDir="false" afterPath="$PROJECT_DIR$/config/boards/shields/lpm_view_adapter/boards/nice_nano_v2.overlay" afterDir="false" />
     </list>
     <list id="9773e84f-53b7-4bbc-800e-7d31ee28fa0b" name="driver lpm update" comment="Remove GPIO configuration for display module&#10;&#10;Commented out the unused `extcomin_gpios` and `disp_gpios` definitions in the YAML file. Adjusted the C code accordingly by removing their usage and configuration, simplifying the initialization and exit sleep functions." />
+    <list id="90b11c48-ca79-44d3-bb82-86bb68ae6690" name="Update SPI pin configurations and enable USB logging  Reconfigured SPI pin settings for `nice_nano_v2` overlays to use SPI3. Also enabled USB logging by uncommenting the relevant configuration line in `corne_left.conf`." comment="Update SPI pin configurations and enable USB logging  Reconfigured SPI pin settings for `nice_nano_v2` overlays to use SPI3. Also enabled USB logging by uncommenting the relevant configuration line in `corne_left.conf`.">
+      <change beforePath="$PROJECT_DIR$/config/boards/shields/lpm_view_adapter/boards/nice_nano_v2.overlay" beforeDir="false" afterPath="$PROJECT_DIR$/config/boards/shields/lpm_view_adapter/boards/nice_nano_v2.overlay" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +55,15 @@
     &quot;accountId&quot;: &quot;332d2721-674f-407e-8847-1915c00d70f7&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/config/boards/shields/lpm_view_adapter/boards/nice_nano_v2.overlay">
+      <ranges>
+        <range start1="7" end1="8" start2="7" end2="8" changelist="90b11c48-ca79-44d3-bb82-86bb68ae6690" />
+        <range start1="10" end1="11" start2="10" end2="11" changelist="4fe47844-4dde-4598-8290-ee7fd9c35466" />
+        <range start1="17" end1="18" start2="17" end2="18" changelist="4fe47844-4dde-4598-8290-ee7fd9c35466" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -98,7 +111,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   },
@@ -123,7 +136,7 @@
       <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.flash right nrfmicro_13 lpm">
+  <component name="RunManager" selected="Shell Script.flash left nice nano lpm">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -260,6 +273,7 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="4fe47844-4dde-4598-8290-ee7fd9c35466" name="Changes" comment="" />
       <changelist id="9773e84f-53b7-4bbc-800e-7d31ee28fa0b" name="driver lpm update" comment="" />
+      <changelist id="90b11c48-ca79-44d3-bb82-86bb68ae6690" name="Update SPI pin configurations and enable USB logging  Reconfigured SPI pin settings for `nice_nano_v2` overlays to use SPI3. Also enabled USB logging by uncommenting the relevant configuration line in `corne_left.conf`." comment="" />
       <created>1713608675331</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -322,7 +336,7 @@
       <workItem from="1725077769312" duration="213000" />
       <workItem from="1725077986965" duration="27000" />
       <workItem from="1725078021194" duration="50000" />
-      <workItem from="1725078089172" duration="1683000" />
+      <workItem from="1725078089172" duration="8663000" />
     </task>
     <task id="LOCAL-00001" summary="v">
       <option name="closed" value="true" />
@@ -476,7 +490,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725098111554</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` for project-specific settings. Added multiple run configurations to streamline development and debugging, such as flashing temper devices and viewing corne logs.">
+      <option name="closed" value="true" />
+      <created>1725098718120</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1725098718120</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,10 +530,13 @@
     <MESSAGE value="add temper" />
     <MESSAGE value="Update shield config and enhance Bluetooth performance&#10;&#10;Renamed the default keyboard name to &quot;temper&quot; for consistency. Added configuration settings to improve Bluetooth controller transmission power and enabled BLE experimental connection mode on both left and right temper shield configurations." />
     <MESSAGE value="Remove unused WS2812 LED strip configuration&#10;&#10;The WS2812 LED strip related code in the nice_nano_v2.overlay file has been removed. This cleanup includes removing the WS2812-specific configuration such as SPI properties and color mapping, as well as eliminating unnecessary includes and chosen node references." />
-    <MESSAGE value="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` file for project-specific settings. Added multiple run configurations such as flashing temper devices and viewing corne logs to streamline development and debugging processes." />
     <MESSAGE value="driver lpm update" />
     <MESSAGE value="Remove GPIO configuration for display module&#10;&#10;Commented out the unused `extcomin_gpios` and `disp_gpios` definitions in the YAML file. Adjusted the C code accordingly by removing their usage and configuration, simplifying the initialization and exit sleep functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove GPIO configuration for display module&#10;&#10;Commented out the unused `extcomin_gpios` and `disp_gpios` definitions in the YAML file. Adjusted the C code accordingly by removing their usage and configuration, simplifying the initialization and exit sleep functions." />
+    <MESSAGE value="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` file for project-specific settings. Added multiple run configurations such as flashing temper devices and viewing corne logs to streamline development and debugging processes." />
+    <MESSAGE value="Update SPI pin configurations and enable USB logging&#10;&#10;Reconfigured SPI pin settings for `nice_nano_v2` overlays to use SPI3. Also enabled USB logging by uncommenting the relevant configuration line in `corne_left.conf`." />
+    <MESSAGE value="Update SPI pin configurations and enable USB logging  Reconfigured SPI pin settings for `nice_nano_v2` overlays to use SPI3. Also enabled USB logging by uncommenting the relevant configuration line in `corne_left.conf`." />
+    <MESSAGE value="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` for project-specific settings. Added multiple run configurations to streamline development and debugging, such as flashing temper devices and viewing corne logs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add IntelliJ workspace and run configurations&#10;&#10;Included new `.idea/workspace.xml` for project-specific settings. Added multiple run configurations to streamline development and debugging, such as flashing temper devices and viewing corne logs." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
