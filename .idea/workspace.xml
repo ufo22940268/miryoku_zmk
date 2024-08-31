@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4fe47844-4dde-4598-8290-ee7fd9c35466" name="Changes" comment="Remove unused WS2812 LED strip configuration&#10;&#10;The WS2812 LED strip related code in the nice_nano_v2.overlay file has been removed. This cleanup includes removing the WS2812-specific configuration such as SPI properties and color mapping, as well as eliminating unnecessary includes and chosen node references." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ufo22940268&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ufo22940268/miryoku_zmk&quot;,
+    &quot;accountId&quot;: &quot;332d2721-674f-407e-8847-1915c00d70f7&quot;
+  }
+}</component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2fMQsk2LHo0pvzSSpw70YQ24jz5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;Shell Script.build.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash left cc.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash left nice nano lpm (1).executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash left nice nano lpm.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash left temper.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash left.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash right nice nano lpm.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash right nrfmicro_13 lpm.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash right nrfmicro_13.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash right temper.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.flash right.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.reset nice_nano_v2.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.view corne log.executor&quot;: &quot;Run&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chao.cheng/IdeaProjects/miryoku_zmk/config/boards/shields/temper/boards&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/boards/shields/temper/boards" />
+      <recent name="$PROJECT_DIR$/config/boards/shields/corne" />
+      <recent name="$PROJECT_DIR$/config/boards/shields/lpm_view" />
+      <recent name="$PROJECT_DIR$/config/boards/shields" />
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Shell Script.flash right temper">
+    <list>
+      <item itemvalue="Shell Script.flash left nice nano lpm" />
+      <item itemvalue="Shell Script.flash left temper" />
+      <item itemvalue="Shell Script.reset nice_nano_v2" />
+      <item itemvalue="Shell Script.view corne log" />
+      <item itemvalue="Shell Script.flash right nrfmicro_13 lpm" />
+      <item itemvalue="Shell Script.flash right temper" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fe47844-4dde-4598-8290-ee7fd9c35466" name="Changes" comment="" />
+      <created>1713608675331</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713608675331</updated>
+      <workItem from="1713608676379" duration="7738000" />
+      <workItem from="1713665607371" duration="1354000" />
+      <workItem from="1713744384002" duration="6557000" />
+      <workItem from="1713846959135" duration="699000" />
+      <workItem from="1713950976982" duration="3265000" />
+      <workItem from="1714043105012" duration="598000" />
+      <workItem from="1714087568415" duration="599000" />
+      <workItem from="1714119746857" duration="127000" />
+      <workItem from="1714121143059" duration="606000" />
+      <workItem from="1714553670260" duration="3680000" />
+      <workItem from="1714774197620" duration="39000" />
+      <workItem from="1714948397212" duration="747000" />
+      <workItem from="1715024861041" duration="2381000" />
+      <workItem from="1715043511667" duration="2000" />
+      <workItem from="1715078502163" duration="1994000" />
+      <workItem from="1715126607887" duration="1273000" />
+      <workItem from="1715212833641" duration="743000" />
+      <workItem from="1715235584210" duration="943000" />
+      <workItem from="1715387514911" duration="6867000" />
+      <workItem from="1715911446610" duration="1359000" />
+      <workItem from="1716357439435" duration="1755000" />
+      <workItem from="1716775510822" duration="4870000" />
+      <workItem from="1716946616002" duration="598000" />
+      <workItem from="1717282003055" duration="4381000" />
+      <workItem from="1717363525326" duration="712000" />
+      <workItem from="1717382927173" duration="606000" />
+      <workItem from="1717389694969" duration="5929000" />
+      <workItem from="1718499744739" duration="1909000" />
+      <workItem from="1719358938129" duration="644000" />
+      <workItem from="1721136549233" duration="816000" />
+      <workItem from="1721986438321" duration="255000" />
+      <workItem from="1722597304165" duration="4698000" />
+      <workItem from="1722689000884" duration="1100000" />
+      <workItem from="1722770446991" duration="2464000" />
+      <workItem from="1722773842188" duration="4920000" />
+      <workItem from="1722811668752" duration="223000" />
+      <workItem from="1722840396295" duration="3785000" />
+      <workItem from="1722849280957" duration="4541000" />
+      <workItem from="1722861459116" duration="599000" />
+      <workItem from="1722862390839" duration="96000" />
+      <workItem from="1722913490317" duration="714000" />
+      <workItem from="1722920075363" duration="7658000" />
+      <workItem from="1722946492492" duration="54000" />
+      <workItem from="1722949536817" duration="2941000" />
+      <workItem from="1723015104159" duration="296000" />
+      <workItem from="1723015698382" duration="656000" />
+      <workItem from="1723502735448" duration="174000" />
+      <workItem from="1723792086564" duration="293000" />
+      <workItem from="1723983319651" duration="2042000" />
+      <workItem from="1724116218448" duration="664000" />
+      <workItem from="1724224778033" duration="7542000" />
+      <workItem from="1724283196590" duration="780000" />
+      <workItem from="1724293695558" duration="4083000" />
+      <workItem from="1724371941392" duration="969000" />
+      <workItem from="1724585252677" duration="9756000" />
+      <workItem from="1725077769312" duration="213000" />
+      <workItem from="1725077986965" duration="27000" />
+      <workItem from="1725078021194" duration="50000" />
+    </task>
+    <task id="LOCAL-00001" summary="v">
+      <option name="closed" value="true" />
+      <created>1713660660761</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713660660761</updated>
+    </task>
+    <task id="LOCAL-00002" summary="copy config from ton, don't know what do these used for, but seem like solve the connection problem of right half keyboards.">
+      <option name="closed" value="true" />
+      <created>1713777852056</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713777852056</updated>
+    </task>
+    <task id="LOCAL-00003" summary="v">
+      <option name="closed" value="true" />
+      <created>1713950992310</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713950992310</updated>
+    </task>
+    <task id="LOCAL-00004" summary="v">
+      <option name="closed" value="true" />
+      <created>1722597307918</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722597307918</updated>
+    </task>
+    <task id="LOCAL-00005" summary="v">
+      <option name="closed" value="true" />
+      <created>1722773339764</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722773339764</updated>
+    </task>
+    <task id="LOCAL-00006" summary="v">
+      <option name="closed" value="true" />
+      <created>1722773641838</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722773641838</updated>
+    </task>
+    <task id="LOCAL-00007" summary="v">
+      <option name="closed" value="true" />
+      <created>1722773642928</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722773642928</updated>
+    </task>
+    <task id="LOCAL-00008" summary="v">
+      <option name="closed" value="true" />
+      <created>1722773649377</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722773649377</updated>
+    </task>
+    <task id="LOCAL-00009" summary="v">
+      <option name="closed" value="true" />
+      <created>1722773652184</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722773652184</updated>
+    </task>
+    <task id="LOCAL-00010" summary="v">
+      <option name="closed" value="true" />
+      <created>1722773663083</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722773663083</updated>
+    </task>
+    <task id="LOCAL-00011" summary="v">
+      <option name="closed" value="true" />
+      <created>1722773671917</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1722773671917</updated>
+    </task>
+    <task id="LOCAL-00012" summary="try to enable vertical status but failed. because the lpm view displays upside down. add some pin config to enable log and comment after to reduce power consumption.">
+      <option name="closed" value="true" />
+      <created>1722985579822</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1722985579822</updated>
+    </task>
+    <task id="LOCAL-00013" summary="v">
+      <option name="closed" value="true" />
+      <created>1724116247041</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1724116247041</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add temper">
+      <option name="closed" value="true" />
+      <created>1724243215318</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1724243215318</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update shield config and enhance Bluetooth performance&#10;&#10;Renamed the default keyboard name to &quot;temper&quot; for consistency. Added configuration settings to improve Bluetooth controller transmission power and enabled BLE experimental connection mode on both left and right temper shield configurations.">
+      <option name="closed" value="true" />
+      <created>1724639442548</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1724639442548</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Remove unused WS2812 LED strip configuration&#10;&#10;The WS2812 LED strip related code in the nice_nano_v2.overlay file has been removed. This cleanup includes removing the WS2812-specific configuration such as SPI properties and color mapping, as well as eliminating unnecessary includes and chosen node references.">
+      <option name="closed" value="true" />
+      <created>1724644695981</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1724644695981</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/zmk-lpm009m360a-driver" />
+    </ignored-roots>
+    <MESSAGE value="copy config from ton, don't know what do these used for, but seem like solve the connection problem of right half keyboards." />
+    <MESSAGE value="try to enable vertical status but failed. because the lpm view displays upside down. add some pin config to enable log and comment after to reduce power consumption." />
+    <MESSAGE value="v" />
+    <MESSAGE value="add temper" />
+    <MESSAGE value="Update shield config and enhance Bluetooth performance&#10;&#10;Renamed the default keyboard name to &quot;temper&quot; for consistency. Added configuration settings to improve Bluetooth controller transmission power and enabled BLE experimental connection mode on both left and right temper shield configurations." />
+    <MESSAGE value="Remove unused WS2812 LED strip configuration&#10;&#10;The WS2812 LED strip related code in the nice_nano_v2.overlay file has been removed. This cleanup includes removing the WS2812-specific configuration such as SPI properties and color mapping, as well as eliminating unnecessary includes and chosen node references." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused WS2812 LED strip configuration&#10;&#10;The WS2812 LED strip related code in the nice_nano_v2.overlay file has been removed. This cleanup includes removing the WS2812-specific configuration such as SPI properties and color mapping, as well as eliminating unnecessary includes and chosen node references." />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

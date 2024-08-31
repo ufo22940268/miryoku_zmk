@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="reset nice_nano_v2" type="ShConfigurationType">
+    <option name="SCRIPT_TEXT" value="west build -p -d build/reset -b nice_nano_v2 -- -DSHIELD=settings_reset -DZMK_CONFIG=&quot;$PROJECT_DIR$/config&quot; &amp;&amp; west flash -d build/reset" />
+    <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+    <option name="SCRIPT_PATH" value="" />
+    <option name="SCRIPT_OPTIONS" value="" />
+    <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/../zmk/app" />
+    <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+    <option name="INTERPRETER_PATH" value="/bin/zsh" />
+    <option name="INTERPRETER_OPTIONS" value="" />
+    <option name="EXECUTE_IN_TERMINAL" value="false" />
+    <option name="EXECUTE_SCRIPT_FILE" value="false" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

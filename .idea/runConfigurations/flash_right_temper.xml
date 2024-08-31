@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="flash right temper" type="ShConfigurationType">
+    <option name="SCRIPT_TEXT" value="west build -p -d build/temper_right -b nice_nano_v2 -- -DSHIELD=&quot;temper_right&quot; -DZMK_CONFIG=&quot;$PROJECT_DIR$/config&quot; &amp;&amp; west flash -d build/temper_right" />
+    <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+    <option name="SCRIPT_PATH" value="west build -d build/left -b nrfmicro_13 -- -DSHIELD=corne_left -DZMK_CONFIG=&quot;$PROJECT_DIR$/config&quot; &amp;&amp; west flash -d build/left" />
+    <option name="SCRIPT_OPTIONS" value="" />
+    <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/../zmk/app" />
+    <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+    <option name="INTERPRETER_PATH" value="/bin/zsh" />
+    <option name="INTERPRETER_OPTIONS" value="" />
+    <option name="EXECUTE_IN_TERMINAL" value="false" />
+    <option name="EXECUTE_SCRIPT_FILE" value="false" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>
