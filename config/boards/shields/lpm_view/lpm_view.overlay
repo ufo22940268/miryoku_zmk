@@ -13,12 +13,10 @@
 				width = <144>;
 				height = <72>;
 				color_mode = [02];
-				reverse = <1>;
+				reverse = <1>; 
 				rotation = <1>;
     };
 };
-
-
 
 / {
     chosen {

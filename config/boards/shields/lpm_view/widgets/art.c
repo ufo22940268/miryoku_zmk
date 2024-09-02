@@ -18,7 +18,7 @@
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_BALLOON uint8_t
     balloon_map[] = {
-#if CONFIG_LPM_VIEW_WIDGET_INVERTED
+#if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
 #else
@@ -115,7 +115,7 @@ const lv_img_dsc_t balloon = {
     .header.always_zero = 0,
     .header.reserved = 0,
     .header.w = 140,
-    .header.h = 68,
+    .header.h = 72,
     .data_size = 1232,
     .data = balloon_map,
 };
@@ -126,7 +126,7 @@ const lv_img_dsc_t balloon = {
 
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_MOUNTAIN uint8_t
     mountain_map[] = {
-#if CONFIG_LPM_VIEW_WIDGET_INVERTED
+#if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0xff, 0xff, 0xff, 0xff, /*Color of index 0*/
         0x00, 0x00, 0x00, 0xff, /*Color of index 1*/
 #else
@@ -223,7 +223,7 @@ const lv_img_dsc_t mountain = {
     .header.always_zero = 0,
     .header.reserved = 0,
     .header.w = 140,
-    .header.h = 68,
+    .header.h = 72,
     .data_size = 1232,
     .data = mountain_map,
 };
