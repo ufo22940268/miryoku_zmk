@@ -1,17 +1,23 @@
-if SHIELD_ERGO_CORNE_LEFT
+if SHIELD_ERGO_CORNE_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Ergo Corne"
+	default "ERGO_CORNE"
 
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+config ZMK_USB
+	default y
 
 endif
 
-if SHIELD_ERGO_CORNE_LEFT || SHIELD_ERGO_CORNE_RIGHT
+if SHIELD_ERGO_CORNE_LEFT || SHIELD_ERGO_CORNE_RIGHT || SHIELD_ERGO_CORNE_DONGLE
 
 config ZMK_SPLIT
     default y
+
+config ZMK_BLE
+	default y
 
 if ZMK_DISPLAY
 
