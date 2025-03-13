@@ -1,7 +1,7 @@
 if SHIELD_TEMPER_DONGLE
 
 config ZMK_KEYBOARD_NAME
-	default "temper_dongle"
+	default "temper_dongle_2"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
@@ -9,12 +9,20 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 config ZMK_USB
 	default y
 
+config ZMK_SPLIT
+    default y
+
 endif
 
 
-if SHIELD_TEMPER_LEFT || SHIELD_TEMPER_RIGHT || SHIELD_TEMPER_DONGLE
+if SHIELD_TEMPER_LEFT || SHIELD_TEMPER_RIGHT
 
 config ZMK_SPLIT
     default y
 
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default n
+
+config ZMK_KEYBOARD_NAME
+	default "temper_dongle_peripheral"
 endif
