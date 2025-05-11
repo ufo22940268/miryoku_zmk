@@ -32,9 +32,5 @@ config ZMK_SPLIT
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default n
 
-config ZMK_KEYBOARD_NAME
-	default "temper_peripheral"
 
-config ZMK_CONFIG_BT_DEVICE_NAME_DYNAMIC
-        default y
 endif
