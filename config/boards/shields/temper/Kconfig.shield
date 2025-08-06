@@ -9,3 +9,6 @@ config SHIELD_TEMPER_RIGHT
 
 config SHIELD_TEMPER_DONGLE
     def_bool $(shields_list_contains,temper_dongle)
+
+config SHIELD_DONGLE_DISPLAY_VIEW_PRO_MICRO
+    def_bool $(shields_list_contains,dongle_display_view_pro_micro)
