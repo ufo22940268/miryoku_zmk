@@ -1,0 +1,12 @@
+file_format: "1"
+id: corne_dongle
+name: Corne Dongle
+type: shield
+url: https://github.com/foostan/crkbd/
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - corne_dongle_dongle
+  - corne_dongle_left
+  - corne_dongle_right

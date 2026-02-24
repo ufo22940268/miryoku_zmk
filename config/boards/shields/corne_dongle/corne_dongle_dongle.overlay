@@ -1,0 +1,19 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "corne_dongle.dtsi"
+
+/* The dongle has no physical keys, replace kscan with a mock */
+/delete-node/ &kscan0;
+
+/ {
+    kscan0: kscan {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <>;
+    };
+};
